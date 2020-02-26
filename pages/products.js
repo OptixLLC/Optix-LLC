@@ -1,6 +1,18 @@
 import Data from '../modules/data';
 import Nav from '../modules/nav';
 import Link from 'next/link';
+import fileData from '../data.json';
+
+var data = "<link rel='stylesheet' href='/card.css'>";
+var i = 0;
+if (fileData.products.length > 0) {
+  while (i < fileData.products.length) {
+    data = data + '<div class="column"><a href="' + fileData.projects[i].url + '"><div class="card"><h3>' + fileData.projects[i].name + '</h3><p>' + fileData.projects[i].sdef + '</p></div></a></div>';
+    i = i + 1;
+  }
+} else {
+  data = data + "There are no products!";
+}
 
 export default function Index() {
   return (
@@ -8,17 +20,14 @@ export default function Index() {
       <body>
         <Nav>
           <ul>
-            <li><Link href="/"><a className="active"><span className="underline">Home</span></a></Link></li>
+            <li><Link href="/"><a>Home</a></Link></li>
             <li><Link href="/projects"><a>Projects</a></Link></li>
-            <li><Link href="/products"><a>Products</a></Link></li>
+            <li><Link href="/products"><a className="active"><span className="underline">Products</span></a></Link></li>
             <li><Link href="/team"><a>Team</a></Link></li>
           </ul>
         </Nav>
         <Data>
-          <div className="center">
-            Optix LLC<br/>
-            Making Hydra & Nuclear.
-          </div>
+          <div className="content" dangerouslySetInnerHTML={{__html: data}}></div>
         </Data>
         <style jsx>{`
           @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Share+Tech+Mono&display=swap');

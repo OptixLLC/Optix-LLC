@@ -1,12 +1,17 @@
-import Data from '../../modules/data';
-import Nav from '../../modules/nav';
+import Data from '../modules/data';
+import Nav from '../modules/nav';
 import Link from 'next/link';
+import fileData from '../data.json';
 
 var data = "<link rel='stylesheet' href='/card.css'>";
 var i = 0;
-while (i < fileData.projects.length) {
-  data = data + '<div class="column"><Link href="/projects/' + fileData.projects[i].name + '"><div class="card"><h3>' + fileData.projects[i].name + '</h3><p>' + fileData.projects[i].sdef + '</p></div></Link></div>';
-  i = i + 1;
+if (fileData.projects.length > 0) {
+  while (i < fileData.projects.length) {
+    data = data + '<div class="column"><a href="https://github.com/OptixLLC/' + fileData.projects[i].name + '"><div class="card"><h3>' + fileData.projects[i].name + '</h3><p>' + fileData.projects[i].sdef + '</p></div></a></div>';
+    i = i + 1;
+  }
+} else {
+  data = data + "There are no projects!";
 }
 
 export default function Index() {
@@ -18,6 +23,7 @@ export default function Index() {
             <li><Link href="/"><a>Home</a></Link></li>
             <li><Link href="/projects"><a className="active"><span className="underline">Projects</span></a></Link></li>
             <li><Link href="/products"><a>Products</a></Link></li>
+            <li><Link href="/team"><a>Team</a></Link></li>
           </ul>
         </Nav>
         <Data>

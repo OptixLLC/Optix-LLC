@@ -108,5 +108,15 @@
       "sdef": "A language for GUI in Nuclear",
       "ldef": ""
     }
+  ],
+  "products": [
+
+  ],
+  "team": [
+    {
+      "name": "Levi",
+      "desc": "A Human",
+      "url": "https://github.com/OptixLLC/"
+    }
   ]
 }

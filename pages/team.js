@@ -1,6 +1,18 @@
-import Data from '../../modules/data';
-import Nav from '../../modules/nav';
+import Data from '../modules/data';
+import Nav from '../modules/nav';
 import Link from 'next/link';
+import fileData from '../data.json';
+
+var data = "<link rel='stylesheet' href='/card.css'>";
+var i = 0;
+if (fileData.team.length > 0) {
+  while (i < fileData.team.length) {
+    data = data + '<div class="card-team"><a href="' + fileData.team[i].url + '"><img src="/' + fileData.team[i].name + '.png" alt="Avatar" style="width:100%"><div class="container"><h4><b>' + fileData.team[i].name + '</b></h4><p>' + fileData.team[i].desc + '</p></div></a></div>';
+    i = i + 1;
+  }
+} else {
+  data = data + "There are no projects!";
+}
 
 export default function Index() {
   return (
@@ -10,13 +22,12 @@ export default function Index() {
           <ul>
             <li><Link href="/"><a>Home</a></Link></li>
             <li><Link href="/projects"><a>Projects</a></Link></li>
-            <li><Link href="/products"><a className="active"><span className="underline">Products</span></a></Link></li>
+            <li><Link href="/products"><a>Products</a></Link></li>
+            <li><Link href="/team"><a className="active"><span className="underline">Team</span></a></Link></li>
           </ul>
         </Nav>
         <Data>
-          <div className="center">
-            Sorry, there are no current releases of any projects!
-          </div>
+          <div className="content" dangerouslySetInnerHTML={{__html: data}}></div>
         </Data>
         <style jsx>{`
           @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Share+Tech+Mono&display=swap');
