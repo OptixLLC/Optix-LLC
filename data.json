@@ -1,0 +1,112 @@
+{
+  "projects": [
+    {
+      "name": "Hydra",
+      "id": 1,
+      "sdef": "A modern Operating System.",
+      "ldef": ""
+    },
+    {
+      "name": "Nuclear",
+      "id": 2,
+      "sdef": "A high level programming language.",
+      "ldef": ""
+    },
+    {
+      "name": "Silicon",
+      "id": 3,
+      "sdef": "A MacOS like desktop for Hydra.",
+      "ldef": ""
+    },
+    {
+      "name": "Neon",
+      "id": 4,
+      "sdef": "A better version control system.",
+      "ldef": ""
+    },
+    {
+      "name": "HCC",
+      "id": 5,
+      "sdef": "A list of comilers for languages such as C and Nuclear.",
+      "ldef": ""
+    },
+    {
+      "name": "Quantum",
+      "id": 6,
+      "sdef": "A chatting app like Discord.",
+      "ldef": ""
+    },
+    {
+      "name": "Krypton",
+      "id": 7,
+      "sdef": "A document editor like Google Docs.",
+      "ldef": ""
+    },
+    {
+      "name": "Lithium",
+      "id": 8,
+      "sdef": "A Learning Application for anything you want.",
+      "ldef": ""
+    },
+    {
+      "name": "Xeon",
+      "id": 9,
+      "sdef": "A text editor.",
+      "ldef": ""
+    },
+    {
+      "name": "Hydra Dev Tools",
+      "id": 10,
+      "sdef": "Build GUIs with Vector.",
+      "ldef": ""
+    },
+    {
+      "name": "Atomic",
+      "id": 11,
+      "sdef": "Hydra's Terminal.",
+      "ldef": ""
+    },
+    {
+      "name": "Neo",
+      "id": 12,
+      "sdef": "A smart chat bot.",
+      "ldef": ""
+    },
+    {
+      "name": "Paper",
+      "id": 13,
+      "sdef": "Take notes and make reminders.",
+      "ldef": ""
+    },
+    {
+      "name": "Blur",
+      "id": 14,
+      "sdef": "A Node.JS Database.",
+      "ldef": ""
+    },
+    {
+      "name": "Helium",
+      "id": 15,
+      "sdef": "A Modern CSS website generator.",
+      "ldef": ""
+    },
+    {
+      "name": "Argon",
+      "id": 15,
+      "sdef": "An advanced math calculator.",
+      "ldef": ""
+    },
+    {
+      "name": "Project Fusion",
+      "id": 16,
+      "sdef": "Modern Tech Inventions and Predictions.",
+      "ldef": ""
+    },
+    {
+      "name": "Vector",
+      "id": 17,
+      "sdef": "A language for GUI in Nuclear",
+      "ldef": ""
+    }
+  ]
+}
